@@ -12,7 +12,7 @@ const data = [
     name: "Leia Organa",
     age: 23,
     gender: "female",
-    alliance: "The Force",
+    alliance: "The Resistance",
     location: "Alderaan, Polis Massa",
     image: "https://i.kym-cdn.com/photos/images/newsfeed/001/058/293/4da.jpg"
   },
@@ -20,7 +20,7 @@ const data = [
     name: "Luke SkyWalker",
     age: 23,
     gender: "male",
-    alliance: "The Resistance",
+    alliance: "The Force",
     location: "Tatooine, Polis Massa, Lars Farm",
     image:
       "https://static1.srcdn.com/wordpress/wp-content/uploads/2019/06/Luke-and-Lightsaber-featured-social-image.jpg"
