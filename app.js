@@ -67,3 +67,13 @@ function profileIterator(profiles) {
     }
   };
 }
+
+let button = document.getElementById("next");
+
+function generateId() {
+  axios.get("http://swapi.co/api/people/1").then(function(response) {
+    console.log(response);
+  });
+}
+
+button.addEventListener("click", sayHello);
