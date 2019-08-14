@@ -2,7 +2,7 @@ let button = document.getElementById("next");
 let name = document.getElementById("name");
 let hairColor = document.getElementById("hair-color");
 let birthYear = document.getElementById("birth-year");
-let homeworld = document.getElementById("homeworld");
+let gender = document.getElementById("gender");
 let increment = 1;
 
 function generateName() {
@@ -23,10 +23,10 @@ function generateBirthYear() {
     .then(jsonRes => (birthYear.innerText = jsonRes.birth_year))
     .catch(error => console.log("some error happen", error));
 }
-function generateHomeWorld() {
-  fetch(`https://swapi.co/api/planets/${increment}`)
+function generateGender() {
+  fetch(`https://swapi.co/api/people/${increment}`)
     .then(res => res.json())
-    .then(jsonRes => (homeworld.innerText = jsonRes.homeworld))
+    .then(jsonRes => (gender.innerText = jsonRes.gender))
     .catch(error => console.log("some error happen", error));
 }
 function moveForward() {
@@ -38,6 +38,6 @@ button.addEventListener("click", () => {
   generateName();
   generateBirthYear();
   generateHairColor();
-  generateHomeWorld();
+  generateGender();
   moveForward();
 });

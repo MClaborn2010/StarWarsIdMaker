@@ -15,27 +15,34 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Profile Scroller</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center">
-          <h1 class="mb-3">Profile Scroller</h1>
-          <div id="imageDisplay"></div>
-          <br />
-          <div id="name">Name:</div>
-          <div id="hair-color">Hair Color:</div>
-          <div id="birth-year">Birth Year:</div>
-          <div id="homeworld">Homeworld:</div>
-          <br />
-          <button id="next" class="btn btn-dark btn-block">Next</button>
-        </div>
+      <div class="top-area">
+        <h1 class="text-primary">Star Wars ID</h1>
+        <p>Inter-Galactic Identification Card</p>
       </div>
+      <hr />
+      <div class="bottom-area">
+        <ul>
+          <li id="name">Name:</li>
+          <hr />
+          <li id="birth-year">Birth Year:</li>
+          <hr />
+          <li id="gender">Gender:</li>
+          <hr />
+          <li id="hair-color">Hair Color:</li>
+        </ul>
+      </div>
+      <button type="submit" title="Next" id="next">Next</button>
     </div>
-    <div id="thisArea"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
