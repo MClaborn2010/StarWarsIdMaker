@@ -1,6 +1,6 @@
 let button = document.getElementById("next");
 let name = document.getElementById("name");
-let number = 1;
+let number = Math.floor(Math.random() * 100);
 
 function getName() {
   fetch(`https://swapi.co/api/people/${number}/`)
