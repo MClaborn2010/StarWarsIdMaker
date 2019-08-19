@@ -3,41 +3,51 @@ let name = document.getElementById("name");
 let hairColor = document.getElementById("hair-color");
 let birthYear = document.getElementById("birth-year");
 let gender = document.getElementById("gender");
-let increment = 1;
+let increment = -1;
 
-function generateName() {
-  fetch(`https://swapi.co/api/people/${increment}`)
-    .then(res => res.json())
-    .then(jsonRes => (name.innerText = jsonRes.name))
-    .catch(error => console.log("some error happen", error));
+button.addEventListener("click", function() {
+  getName(), getBirthYear(), getGender(), getHairColor(), incrementUp();
+});
+
+function getName() {
+  fetch("https://swapi.co/api/people/")
+    .then(response => response.json())
+    .then(
+      json => (name.innerText = "Name: " + json.results[`${increment}`].name)
+    )
+    .catch(err => console.log(err));
 }
-function generateHairColor() {
-  fetch(`https://swapi.co/api/people/${increment}`)
-    .then(res => res.json())
-    .then(jsonRes => (hairColor.innerText = jsonRes.hair_color))
-    .catch(error => console.log("some error happen", error));
+function getHairColor() {
+  fetch("https://swapi.co/api/people/")
+    .then(response => response.json())
+    .then(
+      json =>
+        (hairColor.innerText =
+          "Hair Color: " + json.results[`${increment}`].hair_color)
+    )
+    .catch(err => console.log(err));
 }
-function generateBirthYear() {
-  fetch(`https://swapi.co/api/people/${increment}`)
-    .then(res => res.json())
-    .then(jsonRes => (birthYear.innerText = jsonRes.birth_year))
-    .catch(error => console.log("some error happen", error));
+function getBirthYear() {
+  fetch("https://swapi.co/api/people/")
+    .then(response => response.json())
+    .then(
+      json =>
+        (birthYear.innerText =
+          "Birth Year: " + json.results[`${increment}`].birth_year)
+    )
+    .catch(err => console.log(err));
 }
-function generateGender() {
-  fetch(`https://swapi.co/api/people/${increment}`)
-    .then(res => res.json())
-    .then(jsonRes => (gender.innerText = jsonRes.gender))
-    .catch(error => console.log("some error happen", error));
+
+function getGender() {
+  fetch("https://swapi.co/api/people/")
+    .then(response => response.json())
+    .then(
+      json =>
+        (gender.innerText = "Gender: " + json.results[`${increment}`].gender)
+    )
+    .catch(err => console.log(err));
 }
-function moveForward() {
+function incrementUp() {
   increment++;
   console.log(increment);
 }
-
-button.addEventListener("click", () => {
-  generateName();
-  generateBirthYear();
-  generateHairColor();
-  generateGender();
-  moveForward();
-});

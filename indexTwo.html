@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,40 +15,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
-    <title>Profile Scroller</title>
+    <title>Star Wars Searcher</title>
   </head>
   <body>
     <div class="container">
-      <div class="top-area">
-        <h1 class="text-primary">Star Wars ID</h1>
-        <p>Inter-Galactic Identification Card</p>
-      </div>
-      <hr />
-      <div class="bottom-area">
-        <ul>
-          <li>
-            <p id="name"></p>
-          </li>
-          <hr />
-          <li>
-            <p id="birth-year"></p>
-          </li>
-          <hr />
-          <li>
-            <p id="gender"></p>
-          </li>
-          <hr />
-          <li>
-            <p id="hair-color"></p>
-          </li>
-        </ul>
-      </div>
-      <button type="submit" title="Next" id="next">New ID</button>
+      <h1>Star Wars Search</h1>
+      <p>Search for your favorite Star Wars character for more info!</p>
+      <input type="text" placeholder="Enter Character Name..." id="input-bar" />
+      <button type="submit" name="Submit">Submit</button>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="results"></div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -70,6 +41,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="app2.js"></script>
+    <script src="app3.js"></script>
   </body>
 </html>

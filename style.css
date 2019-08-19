@@ -8,6 +8,7 @@ body {
   border: solid 2px black;
   border-radius: 5px;
   padding: 0;
+  width: 60vw;
 }
 
 hr {
@@ -21,11 +22,12 @@ ul {
 
 li {
   list-style: none;
+  display: flex;
 }
 
 button {
   margin: 5px;
-  width: 60%;
+  width: 150px;
   background-color: darkslategray;
   border: none;
   color: white;
