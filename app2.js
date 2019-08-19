@@ -1,6 +1,8 @@
 let button = document.getElementById("next");
 let name = document.querySelector(".bottom-area");
-let number = Math.floor(Math.random() * 100);
+let min = 1;
+let max = 87;
+let number = Math.floor(Math.random() * (+max - +min) + +min);
 
 function getName() {
   fetch(`https://swapi.co/api/people/${number}/`)
