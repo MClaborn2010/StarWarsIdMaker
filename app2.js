@@ -1,10 +1,13 @@
-let button = document.getElementById("next");
-let name = document.querySelector(".bottom-area");
+const button = document.getElementById("next");
+const name = document.querySelector(".bottom-area");
 let min = 1;
 let max = 87;
-let number = Math.floor(Math.random() * (+max - +min) + +min);
+const clientId =
+  "31819371677-90pb6usu1i56r1a9qokjmf344u7knpeb.apps.googleusercontent.com";
+const secret = "LFFVjk2G1d45nrBTOJDwDSTb";
 
 function getName() {
+  let number = Math.floor(Math.random() * (+max - +min) + +min);
   fetch(`https://swapi.co/api/people/${number}/`)
     .then(response => response.json())
     .then(
@@ -33,7 +36,14 @@ function getName() {
           `)
     )
     .catch(err => console.log(err));
-  number++;
+}
+
+function getImage() {
+  fetch(`https://photoslibrary.googleapis.com/v1/albums/`)
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
 }
 
 button.addEventListener("click", getName);
+button.addEventListener("click", getImage);
